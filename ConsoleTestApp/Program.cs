@@ -16,7 +16,7 @@ namespace ConsoleTestApp
                 dataTable.Columns.Add("Test1");
                 dataTable.Columns.Add("Test2");
 
-                for (int j = 0; j < 10; j++)
+                for (int j = 0; j < 1000; j++)
                 {
                     DataRow row = dataTable.NewRow();
                     row[0] = "1";
@@ -24,7 +24,8 @@ namespace ConsoleTestApp
                     dataTable.Rows.Add(row);
                 }
 
-                launcher.CurrentTable = dataTable;
+                //launcher.CurrentTable = dataTable;
+                launcher.DataTableQueue.Add(dataTable);
             }
 
             Console.ReadLine();

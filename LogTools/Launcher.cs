@@ -19,13 +19,13 @@ namespace LogTools
             set { _dataTable = value; }
         }
 
-        private BlockingCollection<DataTable> DataTableQueue = new BlockingCollection<DataTable>();
+        public BlockingCollection<DataTable> DataTableQueue = new BlockingCollection<DataTable>();
         private CancellationTokenSource ctsQueue = new CancellationTokenSource();
         private CancellationTokenSource ctsIo = new CancellationTokenSource();
 
         public Launcher()
         {
-            DataIntoQueue();
+            //DataIntoQueue();
             WriteIO();
         }
 
